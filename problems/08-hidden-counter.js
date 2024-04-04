@@ -15,8 +15,21 @@ hidden2(); // returns 1
 
 ***********************************************************************/
 
-// Your code here 
+//declare hiddenCounter function
+const hiddenCounter = () => {
+//create count starting at 0
+  let count = 0;
+//return function
+  return () => {
+//increment count
+    count++;
+    return count;
+  };
+};
 
+let hidden1 = hiddenCounter(); //returns a function
+console.log(hidden1()); // returns 1
+console.log(hidden1()); // returns 2
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
 try {
