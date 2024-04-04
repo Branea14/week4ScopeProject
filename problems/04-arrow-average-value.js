@@ -10,7 +10,17 @@ arrowAvgValue([2, 3, 7]); // => 4
 arrowAvgValue([100, 60, 64]); // => 74.66666666666667
 ***********************************************************************/
 
-// Your code here 
+// declare arrowAVgValue function in arrow syntax and const
+const arrowAvgValue = array => {
+//use reduce method on array to get sum
+  let reduce = array.reduce((acc, num) => {
+    return acc += num;
+  });
+//return sum/length of array
+  return reduce / array.length;
+}
+
+
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
