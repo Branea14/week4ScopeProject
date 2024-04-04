@@ -17,8 +17,22 @@ let result2 = arrowMyMap(['run', 'Forrest'], yell);
 console.log(result2);   // [ 'RUN!', 'FORREST!' ]
 
 ***********************************************************************/
+//code
+//declare arrowMyMap function using arrow syntax
+const arrowMyMap = (array, cb) => {
+//claim an empty array
+  let answerArray = [];
+//use forEach on given array
+  array.forEach(ele => {
+//call cb on each element and sent to empty array
+      answerArray.push(cb(ele));
+  });
+//return array
+  return answerArray;
+};
 
-// Your code here 
+
+
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
