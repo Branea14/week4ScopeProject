@@ -17,7 +17,23 @@ sandwich2("pb") // => "One sandwich with tomato and pb"
 
 ***********************************************************************/
 
-// Your code here 
+//declare sandwichMaker
+const sandwichMaker = ingredient => {
+//store string in variable
+  let defaultStart = "One sandwich with tomato";
+//return subfunction
+//declare subfunction
+  return function(ingredient) {
+//inside the function, concat string variable with incoming ingredients string
+    return defaultStart += ` and ${ingredient}`;
+//return concated string
+  };
+};
+
+let sandwich = sandwichMaker(); // => returns a function
+console.log(sandwich("spinach")) // => "One sandwich with tomato and spinach"
+console.log(sandwich("jelly")) // => "One sandwich with tomato and spinach and jelly"
+console.log(sandwich("bread")) // => "One sandwich with tomato and spinach and jelly and bread"
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
