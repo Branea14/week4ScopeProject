@@ -28,8 +28,41 @@ Example 4:
 
 ***********************************************************************/
 
-// Your code here 
+//declare a function countDownTimer
+const countDownTimer = (n) => {
+// ask conditional if (n > 0) return function
+  if (n > 0) {
+//declare anonymous function
+    return () => {
+//set conditional while i > n
+      let i = 0;
+      while (i > n) {
+//return string
+        return 'Happy New Year!';
+        i++;
+      };
+    };
+  };
+};
 
+
+//Example 1:
+  console.log(countDownTimer(0)); // prints "Happy New Year!"
+
+//Example 2:
+  let oneDay = countDownTimer(1); // returns a function
+  console.log(oneDay()); // prints "Happy New Year!"
+
+//Example 3:
+  let twoDays = countDownTimer(2); // returns a function
+  console.log(twoDays()); // returns a function
+  console.log(twoDays()); // prints "Happy New Year!"
+
+//Example 4:
+  let threeDays = countDownTimer(3); // returns a function
+  console.log(threeDays()); // returns a function
+  console.log(threeDays()); // returns a function
+  console.log(threeDays()); // prints "Happy New Year!"
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
 try {
